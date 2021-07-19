@@ -1,0 +1,9 @@
+html {
+  background-color: #e0ffff;
+}
+
+.sessao-principal {
+  display: flex;
+  justify-content: space-around;
+}
+
