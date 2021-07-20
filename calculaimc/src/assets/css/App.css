@@ -1,8 +1,9 @@
 html {
-  background-color: #e0ffff;
+  background-color: #b6c7f5;
 }
 
 .sessao-principal {
+  margin-top: 3rem;
   display: flex;
   justify-content: space-around;
 }

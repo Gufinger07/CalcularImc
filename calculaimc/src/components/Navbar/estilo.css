@@ -1,0 +1,13 @@
+.sessao {
+    height: 40px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sessao-titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    text-align: center;
+    
+}
