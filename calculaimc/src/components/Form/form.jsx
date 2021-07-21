@@ -6,33 +6,40 @@ class Form extends Component {
         super(props)
         this.altura = " "
         this.peso = " "
+        this.resultado = " "
+        
     }
+
+    _getNovoResultado(event) {
+        event.preventDefault()
+        event.stopPropagation()
+        this.resultado = this.peso / (this.altura * this.altura)
+        this.props.criarResultado(this.resultado)
+    }
+
     _handleGetAltura(event) {
         event.preventDefault()
         event.stopPropagation()
         this.altura = event.target.value
-        
     }
     
     _handleGetPeso(event) {
         event.preventDefault()
         event.stopPropagation()
-        this.peso = event.target.value
-        console.log(event.target.value)
+        this.peso = event.target.value 
     }
 
-    
-    
     render() {
         return (
-            <section className="sessao-form">
+            <form onSubmit={this._getNovoResultado.bind(this)} className="sessao-form">
                 <input className="form-input" type="number" placeholder="Informe sua altura (ex: 1,80)"
                 onChange={this._handleGetAltura.bind(this)}/>
                 <input className="form-input" type="number" placeholder="Informe seu peso (ex: 70 Kg)"
                 onChange={this._handleGetPeso.bind(this)}/>
+                <h3>{this.resultado}</h3>
                 <button className="botao botao-calcular" type="submit">Calcular</button>
                 <button className="botao botao-limpar" type="submit">Limpar</button>
-            </section>
+            </form>
         )
     }
 }

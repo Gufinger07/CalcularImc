@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import "./assets/css/App.css"
 import './assets/css/index.css'
 import ClassificacaoImc from './components/ClassificacaoImc';
@@ -5,18 +6,36 @@ import Form from "./components/Form";
 import InfoMassa from "./components/InfoMassa";
 import NavBar from "./components/Navbar";
 
-function App() {
-  return (
-    <main>
-      <NavBar />
-      <section className="sessao-principal">
-      <InfoMassa />
-      <Form />
-      <ClassificacaoImc />
-    </section>
-    </main>
-    
-  );
+class App extends Component {
+
+  constructor(){
+    super();
+
+    this.state = {resultado: []}
+    }
+  
+  criarResultado(resultado) {
+    const novoResultado = {resultado}
+    const novoArrayResultado = [this.setState.resultado, novoResultado]
+    const novoEstado = {
+      resultado:novoArrayResultado
+    }
+    this.setState(novoEstado)
+  }
+  render() {
+    return (
+      <main>
+        <NavBar />
+        <section className="sessao-principal">
+        <InfoMassa />
+        <Form criarResultado={this.criarResultado.bind(this)}/>
+        <ClassificacaoImc />
+      </section>
+      </main>
+      
+    );
+  }
 }
+  
 
 export default App;
