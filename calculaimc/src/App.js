@@ -13,10 +13,9 @@ class App extends Component {
     super();
 
     this.state = {
-      resultado: [],
-      formulario: []
+      resultado: []
     }
-    }
+  }
   
   criarResultado(resultado) {
     const novoResultado = {resultado}
@@ -35,6 +34,16 @@ class App extends Component {
     }
     this.setState(novoEstado)
   }
+
+
+  adicionaMensagem(mensagem) {
+    const novaMensagem = {mensagem}
+    const novoArrayMensagem = [this.setState.mensagem, novaMensagem]
+    const novoEstado = {
+      mensagem: novoArrayMensagem
+    }
+    this.setState(novoEstado)
+  }
   render() {
     return (
       <main>
@@ -42,10 +51,11 @@ class App extends Component {
         <section className="sessao-principal">
           <InfoMassa />
           <Form criarResultado={this.criarResultado.bind(this)}
-          limpaFormulario={this.limpaFormulario.bind(this)}/>
+          limpaFormulario={this.limpaFormulario.bind(this)}
+          />
           <ClassificacaoImc />
       </section>
-        <Rodape />
+      <Rodape />
       </main>
       
     );
