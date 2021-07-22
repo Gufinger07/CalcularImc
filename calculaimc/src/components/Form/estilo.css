@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 2px;
-    border: 2px solid #3db0f7;
+    
     width: 500px;
 }
 .sessao-form:hover {
@@ -51,4 +50,16 @@
     text-align: center;
     border-radius: 4px;
     border: 2px solid black;
+}
+
+.form-resultado {
+    background-color: #3db0f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.resultadoimc {
+    font-size: 18px;
 }

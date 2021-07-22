@@ -5,20 +5,33 @@ import ClassificacaoImc from './components/ClassificacaoImc';
 import Form from "./components/Form";
 import InfoMassa from "./components/InfoMassa";
 import NavBar from "./components/Navbar";
+import Rodape from './components/Rodape';
 
 class App extends Component {
 
   constructor(){
     super();
 
-    this.state = {resultado: []}
+    this.state = {
+      resultado: [],
+      formulario: []
+    }
     }
   
   criarResultado(resultado) {
     const novoResultado = {resultado}
     const novoArrayResultado = [this.setState.resultado, novoResultado]
     const novoEstado = {
-      resultado:novoArrayResultado
+      resultado: novoArrayResultado
+    }
+    this.setState(novoEstado)
+  }
+
+  limpaFormulario(resultado) {
+    const formularioLimpo = {resultado}
+    const novoArrayFormulario = [this.setState.resultado, formularioLimpo]
+    const novoEstado = {    
+      resultado: novoArrayFormulario
     }
     this.setState(novoEstado)
   }
@@ -27,10 +40,12 @@ class App extends Component {
       <main>
         <NavBar />
         <section className="sessao-principal">
-        <InfoMassa />
-        <Form criarResultado={this.criarResultado.bind(this)}/>
-        <ClassificacaoImc />
+          <InfoMassa />
+          <Form criarResultado={this.criarResultado.bind(this)}
+          limpaFormulario={this.limpaFormulario.bind(this)}/>
+          <ClassificacaoImc />
       </section>
+        <Rodape />
       </main>
       
     );
