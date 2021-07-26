@@ -10,6 +10,7 @@
 
     .imagem-tabela {
         margin-top: 3rem;
+        margin-bottom: 2rem;
     }
 
    
@@ -25,5 +26,8 @@
     .sessao-principal {
         flex-direction: row;
     }  
+    .imagem-tabela {
+    margin-bottom: 0rem;
+    }
 }
 
