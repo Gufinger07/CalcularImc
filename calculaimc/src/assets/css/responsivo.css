@@ -1,0 +1,29 @@
+@media screen and (min-width: 0) {
+    .sessao-principal {
+        flex-direction: column;
+        
+    }
+
+    .sessao-form {
+        margin-top: 3rem;
+    }
+
+    .imagem-tabela {
+        margin-top: 3rem;
+    }
+
+   
+}
+
+@media screen and (min-width: 500px) {
+    .sessao-principal {
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .sessao-principal {
+        flex-direction: row;
+    }  
+}
+

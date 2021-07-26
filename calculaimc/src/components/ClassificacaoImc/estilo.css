@@ -1,14 +1,9 @@
 .sessao-imagem {
-    width: 500px;
-   
-    
+    width: 31.25rem;
 }
 
-.sessao-imagem:hover {
-    transform: scale(1.1);
-}
 .imagem-tabela {
-    width: 500px;
+    width: 31.25rem;
 }
 
 

@@ -12,7 +12,7 @@ class Form extends Component {
     _getNovoResultado(event) {
         event.preventDefault()
         event.stopPropagation()
-        if(this.peso && this.altura != 0) {
+        if(this.peso && this.altura !== 0) {
             this.resultado = this.peso / (this.altura * this.altura)
             this.resultado = parseFloat(this.resultado).toFixed(2)
             this.props.criarResultado(this.resultado)
@@ -43,9 +43,9 @@ class Form extends Component {
     render() {
         return (
             <form onSubmit={this._getNovoResultado.bind(this)} className="sessao-form">
-                <input className="form-input" type="number" step="0.01" min="0" max="3" placeholder="Informe sua altura (ex: 1,80)"
+                <input className="form-input input-altura" type="number" step="0.01" min="0" max="3" placeholder="Informe sua altura (ex: 1,80)"
                 onChange={this._handleGetAltura.bind(this)}/>
-                <input className="form-input" type="number" step="0.01" min="20" max="200" placeholder="Informe seu peso (ex: 70 Kg)"
+                <input className="form-input input-peso" type="number" step="0.01" min="20" max="200" placeholder="Informe seu peso (ex: 70 Kg)"
                 onChange={this._handleGetPeso.bind(this)}/>
                 <div className="botao form-resultado">
                     <h3 className="resultadoimc"> Seu IMC: <span>{this.resultado}</span></h3>  

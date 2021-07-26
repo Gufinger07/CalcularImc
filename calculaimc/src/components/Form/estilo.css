@@ -4,18 +4,21 @@
     justify-content: space-around;
     align-items: center;
     
-    width: 500px;
-}
-.sessao-form:hover {
-    transform: scale(1.1);
+    width: 31.25rem;
 }
 
+
 .form-input {
-    height: 30px;
-    width: 300px;
-    border-radius: 4px;
-    border: 2px solid black;
     
+    height: 1.875rem;
+    width: 18.75rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid black;
+    
+}
+
+.input-peso {
+    margin-top: 1.5rem;
 }
 
 .form-input:hover {  
@@ -23,10 +26,11 @@
 }
 
 .botao {
-    height: 30px;
-    width: 300px;
-    border-radius: 4px;
-    border: 2px solid black;
+    margin-top: 1.5rem;
+    height: 1.875rem;
+    width: 18.75rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid black;
     color: rgb(255, 255, 255);
     
 }
@@ -43,13 +47,13 @@
 }
 
 .resultado {
-    margin-top: 2px;
-    height: 30px;
-    width: 300px;
+    margin-top: 0.125rem;
+    height: 1.875rem;
+    width: 18.75rem;
     background-color: white;
     text-align: center;
-    border-radius: 4px;
-    border: 2px solid black;
+    border-radius: 0,25rem;
+    border: 0.125rem solid black;
 }
 
 .form-resultado {
@@ -58,9 +62,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 5rem;
 }
 
 .resultadoimc {
-    font-size: 18px;
+    margin-top: 1rem;
+    font-size: 1.125rem
 }

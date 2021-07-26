@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./assets/css/App.css"
 import './assets/css/index.css'
+import "./assets/css/responsivo.css"
 import ClassificacaoImc from './components/ClassificacaoImc';
 import Form from "./components/Form";
 import InfoMassa from "./components/InfoMassa";
